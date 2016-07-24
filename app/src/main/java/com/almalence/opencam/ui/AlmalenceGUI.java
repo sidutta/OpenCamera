@@ -4833,6 +4833,8 @@ public class AlmalenceGUI extends GUI implements SeekBar.OnSeekBarChangeListener
 		hideSecondaryMenus();
 
 		initModeList();
+
+		// setting the sizes of the square boxes in the modes grid
 		DisplayMetrics metrics = new DisplayMetrics();
 		ApplicationScreen.instance.getWindowManager().getDefaultDisplay().getMetrics(metrics);
 		int width = metrics.widthPixels;

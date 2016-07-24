@@ -45,5 +45,8 @@
     
 	<string name="bestshot_mode_name">Best Shot</string>
 	<string name="bestshot_mode_howto"></string>
-	
+
+    <string name="ocr_mode_name">OCR</string>
+    <string name="ocr_mode_howto"></string>
+
 </resources>

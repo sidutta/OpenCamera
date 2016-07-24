@@ -1,0 +1,53 @@
+GENERAL
+=======
+
+Tabs have been used instead of 4 spaces.
+
+If gradle issues arise due to build-gradle.cmd or build-gradle not found, edit 'commandLine "$ndkDir/ndk-build"' accordingly found in line 31 and 40 of build.gradle(Module:app).
+
+Developer mode should be on the android device. 
+
+Android device should support Camera 2 API. Not all phones support it fully so do check.
+
+Add ndk.dir=/Users/Siddhartha/Downloads/android-ndk-r11b (path to your ndk installation directory) to local.properties for ndk not found errors.
+
+Code for layout is in res/layout/gui_almalence.xml and primary java code for GUI is in java/com.almalence.opencam.ui.AlmalenceGUI.java.
+
+ADDING THE OCR MODE
+===================
+
+When the mode button is clicked on the main menu(the horizontal menu on the bottom), onButtonClick in AlmalenceGUI.java is called. Look for R.id.buttonSelectMode case in switch (id). On going to showModeList(), gridview.setAdapter(modeAdapter); seems crucial. On inspecting instances of modeAdater has modeViews as its elements we reach initModeList() in the same file.
+
+res/values/strings_modes.xml has mapping of visible names in app for modes to tags used inside the code. I added the lines
+    <string name="ocr_mode_name">OCR</string>
+    <string name="ocr_mode_howto"></string>
+
+assets/opencamera_modes.xml has the configuration for every mode as in it lists the plugins that should be activated when a certain mode is active. 
+Added the following code segment
+    <mode id="ocr" name="ocr_mode_name"  savename="BKT">
+
+        <icon       id="gui_almalence_mode_ocr"/>
+
+        <vf         id="com.almalence.plugins.gridvf"/>
+        <vf         id="com.almalence.plugins.zoomvf"/>
+        <vf         id="com.almalence.plugins.focusvf"/>
+        <vf         id="com.almalence.plugins.infosetvf"/>
+        <vf         id="com.almalence.plugins.aeawlockvf"/>
+        <vf         id="com.almalence.plugins.gyrovf"/>
+
+            <capture    id="com.almalence.plugins.expobracketingcapture" />    
+
+            <processing id="com.almalence.plugins.simpleprocessing" />    
+
+            <filter/>    
+
+            <export     id="com.almalence.plugins.export"/>
+
+        <sku/>
+
+        <howtotext  id=""/>
+
+    </mode>
+
+
+Added an icon for ocr mode in res/drawable in all resolution categories by the name gui_almalence_mode_ocr.png.

@@ -96,7 +96,33 @@
 		<howtotext  id=""/>
 	
 	</mode>
-	
+
+	<mode id="ocr" name="ocr_mode_name"  savename="BKT">
+
+		<icon		id="gui_almalence_mode_ocr"/>
+
+		<vf 		id="com.almalence.plugins.gridvf"/>
+		<vf 		id="com.almalence.plugins.zoomvf"/>
+		<vf 		id="com.almalence.plugins.focusvf"/>
+		<vf 		id="com.almalence.plugins.infosetvf"/>
+		<vf 		id="com.almalence.plugins.aeawlockvf"/>
+		<vf 		id="com.almalence.plugins.gyrovf"/>
+
+		    <capture 	id="com.almalence.plugins.expobracketingcapture" />    
+
+		    <processing	id="com.almalence.plugins.simpleprocessing" />    
+
+		    <filter/>    
+
+		    <export 	id="com.almalence.plugins.export"/>
+
+		<sku/>
+
+		<howtotext  id=""/>
+
+	</mode>
+
+
 	<mode id="hdrmode" name="hdr_mode_name"  savename="HDR">
 	
 	    <icon		id="gui_almalence_mode_hdr"/>

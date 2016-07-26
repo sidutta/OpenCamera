@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/siddhant/Downloads/RND_CODE/RND/code/stitchin.cpp
+stdio.h
+-
+iostream
+-
+opencv2/core/core.hpp
+/home/siddhant/Downloads/RND_CODE/RND/code/opencv2/core/core.hpp
+opencv2/features2d/features2d.hpp
+/home/siddhant/Downloads/RND_CODE/RND/code/opencv2/features2d/features2d.hpp
+opencv2/highgui/highgui.hpp
+/home/siddhant/Downloads/RND_CODE/RND/code/opencv2/highgui/highgui.hpp
+opencv2/nonfree/nonfree.hpp
+/home/siddhant/Downloads/RND_CODE/RND/code/opencv2/nonfree/nonfree.hpp
+opencv2/calib3d/calib3d.hpp
+/home/siddhant/Downloads/RND_CODE/RND/code/opencv2/calib3d/calib3d.hpp
+opencv2/imgproc/imgproc.hpp
+/home/siddhant/Downloads/RND_CODE/RND/code/opencv2/imgproc/imgproc.hpp
+

@@ -1,0 +1,6 @@
+Stitching is an example of image stitching of 2 images.
+To do it we run ./stitchin im1 im2.
+
+Shadow removal is an example of removing shadow
+
+Detectskew in the /code and not /RND computes the skew and straightens the images

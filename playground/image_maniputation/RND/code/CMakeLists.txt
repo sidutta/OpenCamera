@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( pano_stitch )
+find_package( OpenCV )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( pano_stitch pano_stitch.cpp )
+target_link_libraries( pano_stitch ${OpenCV_LIBS} )

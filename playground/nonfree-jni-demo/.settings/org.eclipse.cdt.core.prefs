@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+environment/project/com.android.toolchain.gcc.783437659/NDKROOT/delimiter=\:
+environment/project/com.android.toolchain.gcc.783437659/NDKROOT/operation=append
+environment/project/com.android.toolchain.gcc.783437659/NDKROOT/value=/Users/Siddhartha/Downloads/android-ndk-r11b
+environment/project/com.android.toolchain.gcc.783437659/PATH/delimiter=\:
+environment/project/com.android.toolchain.gcc.783437659/PATH/operation=replace
+environment/project/com.android.toolchain.gcc.783437659/PATH/value=/usr/lib/lightdm/lightdm\:/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/usr/games\:/usr/local/games\:/Users/Siddhartha/Downloads/android-ndk-r11b
+environment/project/com.android.toolchain.gcc.783437659/append=true
+environment/project/com.android.toolchain.gcc.783437659/appendContributed=true

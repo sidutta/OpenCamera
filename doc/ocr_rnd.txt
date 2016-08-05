@@ -51,3 +51,5 @@ Added the following code segment
 
 
 Added an icon for ocr mode in res/drawable in all resolution categories by the name gui_almalence_mode_ocr.png(taken from https://design.google.com/icons/).
+
+With ocr capture plugin added in src/main/java/com/almalence/plugins/capture, changed <capture id="com.almalence.plugins.expobracketingcapture" /> to <capture id="com.almalence.plugins.ocr" />

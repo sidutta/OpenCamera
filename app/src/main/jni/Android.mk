@@ -92,6 +92,9 @@ include $(MY_CORE_PATH)/bestshot/Android.mk
 # Night plugin
 include $(MY_CORE_PATH)/nightprocessing/Android.mk
 
+# Grayscale plugin
+include $(MY_CORE_PATH)/grayscaleprocessing/Android.mk
+
 # HDR plugin
 include $(MY_CORE_PATH)/hdrprocessing/Android.mk
 

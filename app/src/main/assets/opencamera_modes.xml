@@ -102,15 +102,16 @@
 		<icon		id="gui_almalence_mode_ocr"/>
 
 		<vf 		id="com.almalence.plugins.gridvf"/>
-		<vf 		id="com.almalence.plugins.zoomvf"/>
+		<vf 		id="com.almalence.plugins.zoomvf"/>   
+		<vf 		id="com.almalence.plugins.histogramvf"/>
 		<vf 		id="com.almalence.plugins.focusvf"/>
 		<vf 		id="com.almalence.plugins.infosetvf"/>
 		<vf 		id="com.almalence.plugins.aeawlockvf"/>
 		<vf 		id="com.almalence.plugins.gyrovf"/>
 
-		    <capture 	id="com.almalence.plugins.expobracketingcapture" />    
+		    <capture 	id="com.almalence.plugins.ocr" />    
 
-		    <processing	id="com.almalence.plugins.simpleprocessing" />    
+		    <processing	id="com.almalence.plugins.multishotprocessing" />    
 
 		    <filter/>    
 

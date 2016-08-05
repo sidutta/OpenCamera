@@ -50,4 +50,4 @@ Added the following code segment
     </mode>
 
 
-Added an icon for ocr mode in res/drawable in all resolution categories by the name gui_almalence_mode_ocr.png.
+Added an icon for ocr mode in res/drawable in all resolution categories by the name gui_almalence_mode_ocr.png(taken from https://design.google.com/icons/).

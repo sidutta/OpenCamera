@@ -18,10 +18,7 @@ by Almalence Inc. All Rights Reserved.
 
 package com.almalence.plugins.processing.multishot;
 
-import java.util.ArrayList;
-
 import android.content.SharedPreferences;
-import android.os.Build;
 import android.os.Handler;
 import android.os.Handler.Callback;
 import android.os.Message;
@@ -35,12 +32,18 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.almalence.asynctaskmanager.OnTaskCompleteListener;
-import com.almalence.plugins.processing.groupshot.GroupShotProcessingPlugin;
+import com.almalence.opencam.ApplicationInterface;
+import com.almalence.opencam.ApplicationScreen;
+import com.almalence.opencam.PluginManager;
+import com.almalence.opencam.PluginProcessing;
+import com.almalence.opencam.R;
 import com.almalence.plugins.processing.groupshot.GroupShotProcessingPlugin;
 import com.almalence.plugins.processing.objectremoval.ObjectRemovalProcessingPlugin;
 import com.almalence.plugins.processing.sequence.SequenceProcessingPlugin;
 import com.almalence.ui.RotateLayout;
-import com.almalence.util.ImageConversion;
+
+import java.util.ArrayList;
+
 /* <!-- +++
  import com.almalence.opencam_plus.ApplicationScreen;
  import com.almalence.opencam_plus.PluginManager;
@@ -50,12 +53,6 @@ import com.almalence.util.ImageConversion;
  import com.almalence.opencam_plus.ApplicationInterface;
  +++ --> */
 // <!-- -+-
-import com.almalence.opencam.ApplicationInterface;
-import com.almalence.opencam.ApplicationScreen;
-import com.almalence.opencam.PluginManager;
-import com.almalence.opencam.PluginProcessing;
-import com.almalence.opencam.cameracontroller.CameraController;
-import com.almalence.opencam.R;
 
 //-+- -->
 
@@ -218,6 +215,7 @@ public class MultiShotProcessingRouter extends PluginProcessing implements OnTas
 		{
 			try
 			{
+//				Log.d();
 				String fileFormat = PluginManager.getInstance().getFileFormat();
 
 				for (int i = 0; i < imagesAmount; ++i)

@@ -24,11 +24,6 @@ package com.almalence.opencam;
 
 //-+- -->
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -55,11 +50,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.almalence.opencam.cameracontroller.CameraController;
+import com.almalence.opencam.ui.GUI.ShutterButton;
 import com.almalence.plugins.capture.bestshot.BestShotCapturePlugin;
 import com.almalence.plugins.capture.burst.BurstCapturePlugin;
 import com.almalence.plugins.capture.expobracketing.ExpoBracketingCapturePlugin;
 import com.almalence.plugins.capture.multishot.MultiShotCapturePlugin;
 import com.almalence.plugins.capture.night.NightCapturePlugin;
+import com.almalence.plugins.capture.ocr.OCRCapturePlugin;
 import com.almalence.plugins.capture.panoramaaugmented.PanoramaAugmentedCapturePlugin;
 import com.almalence.plugins.capture.preshot.PreshotCapturePlugin;
 import com.almalence.plugins.capture.standard.CapturePlugin;
@@ -80,13 +78,17 @@ import com.almalence.plugins.vf.gyro.GyroVFPlugin;
 import com.almalence.plugins.vf.histogram.HistogramVFPlugin;
 import com.almalence.plugins.vf.infoset.InfosetVFPlugin;
 import com.almalence.plugins.vf.zoom.ZoomVFPlugin;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.List;
+
 /* <!-- +++
  import com.almalence.opencam_plus.cameracontroller.CameraController;
  import com.almalence.opencam_plus.ui.GUI.ShutterButton;
  +++ --> */
 //<!-- -+-
-import com.almalence.opencam.cameracontroller.CameraController;
-import com.almalence.opencam.ui.GUI.ShutterButton;
 
 //-+- -->
 
@@ -202,6 +204,10 @@ public class PluginManager extends PluginManagerBase
 		MultiShotCapturePlugin multiShotCapturePlugin = new MultiShotCapturePlugin();
 		pluginList.put(multiShotCapturePlugin.getID(), multiShotCapturePlugin);
 		listCapture.add(multiShotCapturePlugin);
+
+		OCRCapturePlugin ocrCapturePlugin = new OCRCapturePlugin();
+		pluginList.put(ocrCapturePlugin.getID(), ocrCapturePlugin);
+		listCapture.add(ocrCapturePlugin);
 
 		VideoCapturePlugin videoCapturePlugin = new VideoCapturePlugin();
 		pluginList.put(videoCapturePlugin.getID(), videoCapturePlugin);
@@ -614,6 +620,9 @@ public class PluginManager extends PluginManagerBase
 		} else if ("multishot".equals(settings))
 		{
 			AddModeSettings("multishot", pf);
+		} else if ("ocr".equals(settings))
+		{
+			AddModeSettings("ocr", pf);
 		} else if ("panorama_augmented".equals(settings))
 		{
 			AddModeSettings("panorama_augmented", pf);

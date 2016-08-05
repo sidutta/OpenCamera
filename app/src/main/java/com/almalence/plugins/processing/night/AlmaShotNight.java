@@ -40,6 +40,6 @@ public final class AlmaShotNight
 	{
 		System.loadLibrary("utils-image");
 		System.loadLibrary("almalib");
-		System.loadLibrary("almashot-night");
+		System.loadLibrary("almashot-gray");
 	}
 }

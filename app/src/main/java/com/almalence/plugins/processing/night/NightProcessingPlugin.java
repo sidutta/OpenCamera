@@ -19,9 +19,16 @@ by Almalence Inc. All Rights Reserved.
 package com.almalence.plugins.processing.night;
 
 import android.content.SharedPreferences;
-import android.os.Build;
 import android.preference.PreferenceManager;
+import android.util.Log;
+
 import com.almalence.asynctaskmanager.OnTaskCompleteListener;
+import com.almalence.opencam.ApplicationScreen;
+import com.almalence.opencam.ConfigParser;
+import com.almalence.opencam.PluginManager;
+import com.almalence.opencam.PluginProcessing;
+import com.almalence.opencam.R;
+import com.almalence.opencam.cameracontroller.CameraController;
 
 /* <!-- +++
  import com.almalence.opencam_plus.ApplicationScreen;
@@ -32,12 +39,6 @@ import com.almalence.asynctaskmanager.OnTaskCompleteListener;
  import com.almalence.opencam_plus.cameracontroller.CameraController;
  +++ --> */
 // <!-- -+-
-import com.almalence.opencam.ApplicationScreen;
-import com.almalence.opencam.ConfigParser;
-import com.almalence.opencam.PluginManager;
-import com.almalence.opencam.PluginProcessing;
-import com.almalence.opencam.R;
-import com.almalence.opencam.cameracontroller.CameraController;
 
 //-+- -->
 
@@ -87,6 +88,8 @@ public class NightProcessingPlugin extends PluginProcessing implements OnTaskCom
 	@Override
 	public void onStartProcessing(long SessionID)
 	{
+
+		Log.d("Siddhartha", "def");
 		sessionID = SessionID;
 
 		if (CameraController.isUseCamera2())
